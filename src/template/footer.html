@@ -1,0 +1,152 @@
+<div class="backdrop">
+    <div class="modal" id="thanks">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">                
+                <h2 class="modal__title">Заявка отправлена</h2>
+                <div class="modal__text">Спасибо! С вами свяжутся в течение 3 дней <br>
+                    по указаным данным</div>
+                <img src="img/icons/thumb.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="password">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">                
+                <h2 class="modal__title">Изменить пароль</h2>
+                <div class="modal__text">Для зашиты вашего аккаунта, мы отправили <br> шестизначный код на <span>uxromaova@gmail.com</span></div>
+                
+                <form action="">
+                    <div class="form-group">
+                        <label for="">Введите код </label>
+                        <input type="text">
+                        <a href="javascript:void(0)">Отправить код повторно</a>
+                    </div>
+                </form>
+
+                <div class="main__controls">
+                    <a href="javascript:void(0)" class="btn" data-modal="changepassword">Далее </a>
+                    <a href="javascript:void(0)" class="btn btn-arrow">
+                        Вернуться <br> назад 
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.8779 6.70539L13.6279 0.455393C13.4652 0.29262 13.2015 0.29262 13.0387 0.455393C12.876 0.618166 12.876 0.881838 13.0387 1.04457L18.5775 6.58332H0.41668C0.186367 6.58332 0 6.76969 0 7C0 7.23031 0.186367 7.41668 0.41668 7.41668H18.5775L13.0387 12.9554C12.876 13.1182 12.876 13.3818 13.0387 13.5446C13.1201 13.6259 13.2268 13.6666 13.3334 13.6666C13.44 13.6666 13.5466 13.6259 13.628 13.5446L19.878 7.29457C20.0407 7.13184 20.0407 6.86817 19.8779 6.70539Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="changepassword">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">                
+                <h2 class="modal__title">Изменить пароль</h2>
+                <div class="modal__text">Остался последний шаг</div>
+                
+                <form action="">
+                    <div class="form-group">
+                        <label for="">Новый пароль</label>
+                        <input type="password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Подтвердить пароль</label>
+                        <input type="password">
+                    </div>
+                </form>
+
+                <div class="main__controls">
+                    <a href="javascript:void(0)" class="btn">Далее </a>
+                    <a href="javascript:void(0)" class="btn btn-arrow">
+                        Вернуться <br> назад 
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.8779 6.70539L13.6279 0.455393C13.4652 0.29262 13.2015 0.29262 13.0387 0.455393C12.876 0.618166 12.876 0.881838 13.0387 1.04457L18.5775 6.58332H0.41668C0.186367 6.58332 0 6.76969 0 7C0 7.23031 0.186367 7.41668 0.41668 7.41668H18.5775L13.0387 12.9554C12.876 13.1182 12.876 13.3818 13.0387 13.5446C13.1201 13.6259 13.2268 13.6666 13.3334 13.6666C13.44 13.6666 13.5466 13.6259 13.628 13.5446L19.878 7.29457C20.0407 7.13184 20.0407 6.86817 19.8779 6.70539Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="subscribe">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">                
+                <h2 class="modal__title">Продлить подписку</h2>
+                <div class="modal__text">Обратите внимание, если вы продлеваете подписку  <br>
+                    в процессе действующей, то при оплате к текущему счетчику <br> добавляются новые дни</div>
+
+                <div class="plans">
+                    <div class="plans__text">Выберите наиболее подходящий вариант подписки</div>
+
+                    <div class="plans__list">
+                        <div class="plans__item">
+                            <span>7 дней</span>
+                            <div>99₽</div>
+                        </div>
+                        <div class="plans__item active">
+                            <span>30 дней</span>
+                            <div>149₽</div>
+                        </div>
+                        <div class="plans__item">
+                            <span>90 дней</span>
+                            <div>299₽</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" placeholder="Промокод">
+                    </div>
+
+                    <button data-modal="pay" class="btn" type="submit">Оплатить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="update">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">                
+                <h2 class="modal__title">Обновите подписку до версии PRO</h2>
+
+                <div class="services__item">
+                    <div class="services__tag">#резюме</div>
+                    <h3 class="services__title">Версия PRO</h3>
+                    <div class="services__text">Полный доступ к конструктору резюме без ограничений </div>
+                    <div class="services__text">Доступ к базе навыков по профессиям</div>
+                    <div class="services__text">Доступ к видео-уроку с детальным разбором каждого пункта резюме</div>
+                    <div class="services__text">Доступ к базе примеров успешных резюме</div>
+                    <div class="services__text">Гайд по созданию грамотного
+                        сопроводительного письма</div>
+                    <div class="services__text">Гайд по подготовке к собеседованию</div>
+                    <div class="services__text">Возможность создавать и хранить
+                        неограниченное кол-во персонализированных резюме</div>
+                    <div class="services__text">Доступ к ЛК на 7 /30 / 90 дней</div>
+                    <div class="services__controls">
+                        <strong>От 99₽</strong>
+                    </div>
+                    <a href="javascript:void(0)" data-modal="pay" class="btn center">Купить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="pay">
+        <img src="img/pay.png" style="margin: 0 auto;" alt="">
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
