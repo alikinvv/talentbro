@@ -70,7 +70,7 @@ gulp.task('img:dev',function() {
 
 gulp.task('img:build',function() {
     return gulp.src('src/img/**/*.{png,jpg}')
-        .pipe(gp.tinypng('4jyAh2TumYspKSm9bJ8td6WmPOA7MzjG'))
+        .pipe(gp.tinypng('FwlRHPRcqwTnrcnmdbDTPGffnZzFWQGS'))
         .pipe(gulp.dest('build/img'))
 });
 

@@ -3312,7 +3312,6 @@ a {
 	.container {
 		@include fssb;
 		position: relative;
-		height: 122vh;
 
 		&::before {
 			content: '';
@@ -3346,6 +3345,14 @@ a {
 			margin-bottom: 40px;
 			pointer-events: none;
 			user-select: none;
+			display: block;
+		}
+	}
+
+	&__right {
+		display: none;
+
+		&.active {
 			display: block;
 		}
 	}

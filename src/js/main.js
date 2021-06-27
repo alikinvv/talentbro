@@ -277,6 +277,11 @@ if (document.querySelector('#nouislider') !== null) {
     });
 }
 
+if (document.querySelector('.change') !== null) {
+    console.log(document.querySelector('.change__right').offsetHeight)
+    document.querySelector('.change__right').style.height = document.querySelector('.change .container').offsetHeight + 'px';
+    document.querySelector('.change__right').classList.add('active');
+}
 
 var swiper = new Swiper(".steps .slider__navigation", {
     spaceBetween: 10,
@@ -318,4 +323,9 @@ var reviews = new Swiper(".reviews .slider__main", {
         init: progress,
         slideChange: progress
     },
+});
+
+var phoneMask = IMask(
+document.getElementById('phone-mask'), {
+    mask: '+{7}(000)000-00-00'
 });
