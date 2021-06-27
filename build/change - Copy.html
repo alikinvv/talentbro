@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:ital,wght@0,400;0,500;0,700;1,400&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--> 
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <a href="/" class="header__logo">TalentBro</a>
+
+        <div class="menu">
+            <a href="javascript:void(0)">О сервисе</a>
+            <a href="javascript:void(0)">Резюме</a>
+            <a href="javascript:void(0)">Услуги</a>
+            <a href="javascript:void(0)">Блог</a>
+            <a href="javascript:void(0)">Напишите нам</a>
+        </div>
+
+        <a href="javascript:void(0)" class="btn btn-outline">Зарегистрироваться</a>
+    </div>
+</header>
+<!-- START CONTENT  -->
+
+<div class="topbar">
+    <div class="container">
+        <div class="topbar__left">
+            <div class="topbar__back">
+                <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.462793 1.02556C0.235087 1.25343 0.235152 1.62273 0.462939 1.85051L4.29301 5.68059C4.68354 6.07111 5.3167 6.07111 5.70723 5.68059L9.5373 1.85051C9.76509 1.62273 9.76515 1.25343 9.53745 1.02556C9.30962 0.797571 8.94007 0.797519 8.71218 1.02545L5.00012 4.73803L1.28806 1.02545C1.06017 0.797519 0.690625 0.797571 0.462793 1.02556Z" fill="#3B48D1"/>
+                </svg>
+
+                Вернуться назад</div>
+        </div>
+        <div class="topbar__template active">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 13C14 13.5523 13.5523 14 13 14H9C8.44772 14 8 13.5523 8 13V9C8 8.44772 8.44772 8 9 8H13C13.5523 8 14 8.44772 14 9V13ZM6 13C6 13.5523 5.55228 14 5 14H1C0.447715 14 0 13.5523 0 13V9C0 8.44772 0.447715 8 1 8H5C5.55228 8 6 8.44772 6 9V13ZM14 5C14 5.55228 13.5523 6 13 6H9C8.44772 6 8 5.55228 8 5V1C8 0.447715 8.44772 0 9 0H13C13.5523 0 14 0.447715 14 1V5ZM6 5C6 5.55228 5.55228 6 5 6H1C0.447715 6 0 5.55228 0 5V1C0 0.447715 0.447715 0 1 0H5C5.55228 0 6 0.447715 6 1V5Z" fill="#3B48D1"/>
+            </svg>
+            Изменить шаблон</div>
+        <div class="download">
+            <a href="javascript:void(0)" class="btn">Скачать</a>
+            <div class="download__menu">
+                <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 16C0.89543 16 0 15.1046 0 14C0 12.8954 0.89543 12 2 12C3.10457 12 4 12.8954 4 14C4 15.1046 3.10457 16 2 16ZM2 10C0.89543 10 0 9.10457 0 8C0 6.89543 0.89543 6 2 6C3.10457 6 4 6.89543 4 8C4 8.53043 3.78929 9.03914 3.41421 9.41421C3.03914 9.78929 2.53043 10 2 10ZM2 4C0.89543 4 0 3.10457 0 2C0 0.89543 0.89543 0 2 0C3.10457 0 4 0.89543 4 2C4 2.53043 3.78929 3.03914 3.41421 3.41421C3.03914 3.78929 2.53043 4 2 4Z" fill="white"/>
+                </svg>
+
+                <div class="download__list">
+                    <a href="javascript:void(0)">
+                        <img src="img/icons/doc.svg" alt="">
+                        Скачать в DOCX
+                    </a>
+                    <a href="javascript:void(0)">
+                        <img src="img/icons/pdf.svg" alt="">
+                        Скачать в PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="topbar__right">
+            <a href="javascript:void(0)" class="btn btn-outline" data-modal="create">Перейти к превью</a>
+            <div class="topbar__close" data-modal="wait">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.77319 7.001L13.8396 0.934579C14.0532 0.720998 14.0532 0.374717 13.8396 0.161163C13.626 -0.0523915 13.2797 -0.0524189 13.0662 0.161163L6.99974 6.22758L0.933353 0.161163C0.719771 -0.0524189 0.373491 -0.0524189 0.159936 0.161163C-0.0536179 0.374744 -0.0536453 0.721025 0.159936 0.934579L6.22633 7.00097L0.159936 13.0674C-0.0536453 13.281 -0.0536453 13.6273 0.159936 13.8408C0.266714 13.9476 0.406686 14.001 0.546658 14.001C0.686631 14.001 0.826576 13.9476 0.93338 13.8408L6.99974 7.77441L13.0661 13.8408C13.1729 13.9476 13.3129 14.001 13.4529 14.001C13.5928 14.001 13.7328 13.9476 13.8396 13.8408C14.0532 13.6272 14.0532 13.2809 13.8396 13.0674L7.77319 7.001Z" fill="#3B48D1"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="change">
+    <div class="container">
+        <div class="change__left">
+            <img src="img/change.jpg" alt="">
+
+            <div class="change__navigation">
+                <svg class="change__arrow change__arrow-left disable" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.462793 1.02556C0.235087 1.25343 0.235152 1.62273 0.462939 1.85051L4.29301 5.68059C4.68354 6.07111 5.3167 6.07111 5.70723 5.68059L9.5373 1.85051C9.76509 1.62273 9.76515 1.25343 9.53745 1.02556C9.30962 0.797571 8.94007 0.797519 8.71218 1.02545L5.00012 4.73803L1.28806 1.02545C1.06017 0.797519 0.690625 0.797571 0.462793 1.02556Z" fill="#3B48D1"/>
+                </svg>
+
+                <div class="change__num"><strong>1</strong> / 2</div>
+                
+                <svg class="change__arrow change__arrow-right" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.462793 1.02556C0.235087 1.25343 0.235152 1.62273 0.462939 1.85051L4.29301 5.68059C4.68354 6.07111 5.3167 6.07111 5.70723 5.68059L9.5373 1.85051C9.76509 1.62273 9.76515 1.25343 9.53745 1.02556C9.30962 0.797571 8.94007 0.797519 8.71218 1.02545L5.00012 4.73803L1.28806 1.02545C1.06017 0.797519 0.690625 0.797571 0.462793 1.02556Z" fill="#3B48D1"/>
+                </svg>
+            </div>
+        </div>
+        <div data-simplebar>
+            <div class="template__list">
+                <div class="template__item">
+                    <div class="template__title">Яркий</div>
+                    <div class="template__img" style="background-image: url('img/t1.jpg');"><img src="img/icons/check.svg" alt=""></div>
+                    <div class="colors">
+                        <div style="background-color: #F1D694;"></div>
+                        <div style="background-color: #F3BEA2;"></div>
+                        <div style="background-color: #FDF4F1;"></div>
+                        <div style="background-color: #A2B1B1;"></div>
+                    </div>
+                </div>
+                <div class="template__item">
+                    <div class="template__title">Минималистичный</div>
+                    <div class="template__img" style="background-image: url('img/t2.jpg');"><img src="img/icons/check.svg" alt=""></div>
+                    <div class="colors">
+                        <div style="background-color: #B1A89A;"></div>
+                        <div style="background-color: #958373;"></div>
+                        <div style="background-color: #888782;"></div>
+                        <div style="background-color: #5F6054;"></div>
+                    </div>
+                </div>
+                <div class="template__item">
+                    <div class="template__title">Минималистичный</div>
+                    <div class="template__img" style="background-image: url('img/t3.jpg');"><img src="img/icons/check.svg" alt=""></div>
+                    <div class="colors">
+                        <div style="background-color: #5B5B5B;"></div>
+                        <div style="background-color: #777A79;"></div>
+                        <div style="background-color: #A9B1AE;"></div>
+                        <div style="background-color: #B1A9A9;"></div>
+                    </div>
+                </div>
+                <div class="template__item">
+                    <div class="template__title">Стандартный</div>
+                    <div class="template__img" style="background-image: url('img/t4.jpg');"><img src="img/icons/check.svg" alt=""></div>
+                    <div class="colors">
+                        <div style="background-color: #000000;"></div>
+                        <div style="background-color: #5B5B5B;"></div>
+                        <div style="background-color: #0C195A;"></div>
+                        <div style="background-color: #345965;"></div>
+                    </div>
+                </div>
+                <div class="template__item">
+                    <div class="template__title">Креативный</div>
+                    <div class="template__img" style="background-image: url('img/t5.jpg');"><img src="img/icons/check.svg" alt=""></div>
+                    <div class="colors">
+                        <div style="background-color: #E9E0DD;"></div>
+                        <div style="background-color: #E2CBC9;"></div>
+                        <div style="background-color: #798098;"></div>
+                        <div style="background-color: #E7E6E6;"></div>
+                    </div>
+                </div>
+                <div class="template__item">
+                    <div class="template__title">Минималистичный</div>
+                    <div class="template__img" style="background-image: url('img/t6.jpg');"><img src="img/icons/check.svg" alt=""></div>
+                    <div class="colors">
+                        <div style="background-color: #040E41;"></div>
+                        <div style="background-color: #5D8491;"></div>
+                        <div style="background-color: #938484;"></div>
+                        <div style="background-color: #000000;"></div>
+                    </div>
+                </div>
+                <div class="template__item">
+                    <div class="template__title">Строгий</div>
+                    <div class="template__img" style="background-image: url('img/t8.jpg');"><img src="img/icons/check.svg" alt=""></div>
+                    <div class="colors">
+                        <div style="background-color: #21374A;"></div>
+                        <div style="background-color: #1C5781;"></div>
+                        <div style="background-color: #858C9E;"></div>
+                        <div style="background-color: #F0DBA5;"></div>
+                    </div>
+                </div>
+                <div class="template__item">
+                    <div class="template__title">Современный</div>
+                    <div class="template__img" style="background-image: url('img/t1.jpg');"><img src="img/icons/check.svg" alt=""></div>
+                    <div class="colors">
+                        <div style="background-color: #A4B5BF;"></div>
+                        <div style="background-color: #EED7CA;"></div>
+                        <div style="background-color: #E6EDF2;"></div>
+                        <div style="background-color: #CDDBD2;"></div>
+                    </div>
+                </div>
+                <div class="template__item">
+                    <div class="template__title">Креативный</div>
+                    <div class="template__img" style="background-image: url('img/t2.jpg');"><img src="img/icons/check.svg" alt=""></div>
+                    <div class="colors">
+                        <div style="background-color: #E9E0DD;"></div>
+                        <div style="background-color: #E2CBC9;"></div>
+                        <div style="background-color: #798098;"></div>
+                        <div style="background-color: #E7E6E6;"></div>
+                    </div>
+                </div>
+                <div class="template__item">
+                    <div class="template__title">Минималистичный</div>
+                    <div class="template__img" style="background-image: url('img/t3.jpg');"><img src="img/icons/check.svg" alt=""></div>
+                    <div class="colors">
+                        <div style="background-color: #040E41;"></div>
+                        <div style="background-color: #5D8491;"></div>
+                        <div style="background-color: #938484;"></div>
+                        <div style="background-color: #000000;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- END CONTENT  -->
+<div class="backdrop">
+    <div class="modal" id="thanks">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">                
+                <h2 class="modal__title">Заявка отправлена</h2>
+                <div class="modal__text">Спасибо! С вами свяжутся в течение 3 дней <br>
+                    по указаным данным</div>
+                <img src="img/icons/thumb.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="password">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">                
+                <h2 class="modal__title">Изменить пароль</h2>
+                <div class="modal__text">Для зашиты вашего аккаунта, мы отправили <br> шестизначный код на <span>uxromaova@gmail.com</span></div>
+                
+                <form action="">
+                    <div class="form-group">
+                        <label for="">Введите код </label>
+                        <input type="text">
+                        <a href="javascript:void(0)">Отправить код повторно</a>
+                    </div>
+                </form>
+
+                <div class="main__controls">
+                    <a href="javascript:void(0)" class="btn" data-modal="changepassword">Далее </a>
+                    <a href="javascript:void(0)" class="btn btn-arrow">
+                        Вернуться <br> назад 
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.8779 6.70539L13.6279 0.455393C13.4652 0.29262 13.2015 0.29262 13.0387 0.455393C12.876 0.618166 12.876 0.881838 13.0387 1.04457L18.5775 6.58332H0.41668C0.186367 6.58332 0 6.76969 0 7C0 7.23031 0.186367 7.41668 0.41668 7.41668H18.5775L13.0387 12.9554C12.876 13.1182 12.876 13.3818 13.0387 13.5446C13.1201 13.6259 13.2268 13.6666 13.3334 13.6666C13.44 13.6666 13.5466 13.6259 13.628 13.5446L19.878 7.29457C20.0407 7.13184 20.0407 6.86817 19.8779 6.70539Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="changepassword">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">                
+                <h2 class="modal__title">Изменить пароль</h2>
+                <div class="modal__text">Остался последний шаг</div>
+                
+                <form action="">
+                    <div class="form-group">
+                        <label for="">Новый пароль</label>
+                        <input type="password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Подтвердить пароль</label>
+                        <input type="password">
+                    </div>
+                </form>
+
+                <div class="main__controls">
+                    <a href="javascript:void(0)" class="btn">Далее </a>
+                    <a href="javascript:void(0)" class="btn btn-arrow">
+                        Вернуться <br> назад 
+                        <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.8779 6.70539L13.6279 0.455393C13.4652 0.29262 13.2015 0.29262 13.0387 0.455393C12.876 0.618166 12.876 0.881838 13.0387 1.04457L18.5775 6.58332H0.41668C0.186367 6.58332 0 6.76969 0 7C0 7.23031 0.186367 7.41668 0.41668 7.41668H18.5775L13.0387 12.9554C12.876 13.1182 12.876 13.3818 13.0387 13.5446C13.1201 13.6259 13.2268 13.6666 13.3334 13.6666C13.44 13.6666 13.5466 13.6259 13.628 13.5446L19.878 7.29457C20.0407 7.13184 20.0407 6.86817 19.8779 6.70539Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="subscribe">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">                
+                <h2 class="modal__title">Продлить подписку</h2>
+                <div class="modal__text">Обратите внимание, если вы продлеваете подписку  <br>
+                    в процессе действующей, то при оплате к текущему счетчику <br> добавляются новые дни</div>
+
+                <div class="plans">
+                    <div class="plans__text">Выберите наиболее подходящий вариант подписки</div>
+
+                    <div class="plans__list">
+                        <div class="plans__item">
+                            <span>7 дней</span>
+                            <div>99₽</div>
+                        </div>
+                        <div class="plans__item active">
+                            <span>30 дней</span>
+                            <div>149₽</div>
+                        </div>
+                        <div class="plans__item">
+                            <span>90 дней</span>
+                            <div>299₽</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" placeholder="Промокод">
+                    </div>
+
+                    <button data-modal="pay" class="btn" type="submit">Оплатить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="update">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">                
+                <h2 class="modal__title">Обновите подписку до версии PRO</h2>
+
+                <div class="services__item">
+                    <div class="services__tag">#резюме</div>
+                    <h3 class="services__title">Версия PRO</h3>
+                    <div class="services__text">Полный доступ к конструктору резюме без ограничений </div>
+                    <div class="services__text">Доступ к базе навыков по профессиям</div>
+                    <div class="services__text">Доступ к видео-уроку с детальным разбором каждого пункта резюме</div>
+                    <div class="services__text">Доступ к базе примеров успешных резюме</div>
+                    <div class="services__text">Гайд по созданию грамотного
+                        сопроводительного письма</div>
+                    <div class="services__text">Гайд по подготовке к собеседованию</div>
+                    <div class="services__text">Возможность создавать и хранить
+                        неограниченное кол-во персонализированных резюме</div>
+                    <div class="services__text">Доступ к ЛК на 7 /30 / 90 дней</div>
+                    <div class="services__controls">
+                        <strong>От 99₽</strong>
+                    </div>
+                    <a href="javascript:void(0)" data-modal="pay" class="btn center">Купить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="wait">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">                
+                <h2 class="modal__title">Подожди!</h2>
+                <div class="modal__text">Если ты уйдешь, то потеряешь свое резюме. Создай <br> аккаунт, чтобы сохранить прогресс</div>
+                
+                <div class="main__controls">
+                    <a href="javascript:void(0)">Закрыть окно</a>
+                    <a href="javascript:void(0)" class="btn">Зарегистрироваться </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="create">
+        <div class="modal__close"></div>
+        <div class="modal__content">
+            <div class="modal__close"></div>
+            <div class="modal__body">                
+                <h2 class="modal__title">Создай аккаунт</h2>
+                <div class="modal__text">Не забудьте зарегистрироваться. Тогда мы сможем <br> сохранить готовое резюме, чтобы вы смогли вернуться <br> 
+                    к нему позже.</div>
+                
+                <div class="main__controls">
+                    <a href="javascript:void(0)">Закрыть окно</a>
+                    <a href="javascript:void(0)" class="btn">Зарегистрироваться </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="pay">
+        <img src="img/pay.png" style="margin: 0 auto;" alt="">
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
