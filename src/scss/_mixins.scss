@@ -159,6 +159,12 @@
   justify-content: space-between;
 }
 
+@mixin fss {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 @mixin fesb {
   display: flex;
   align-items: flex-end;
