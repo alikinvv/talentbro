@@ -1174,8 +1174,13 @@ a {
 		}
 	}
 
-	.services__controls {
-		text-align: left;
+	.services__controls .btn {
+		@include r(767) {
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			text-align: center;
+		}
 	}
 }
 
