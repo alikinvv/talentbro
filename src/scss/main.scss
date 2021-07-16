@@ -111,6 +111,7 @@ button {
 	}
 }
 
+.input,
 .dropdown__trigger,
 input,
 textarea,
@@ -356,6 +357,12 @@ a {
 	}
 
 	div {
+		@include r(1279) {
+			br {
+				display: none;
+			}
+		}
+
 		@include r(767) {
 			font-size: 14px;
 		}
@@ -828,6 +835,12 @@ a {
 		padding-top: 100px;
 	}
 
+	@include r(1023) {
+		& + .callback {
+			padding-top: 0;
+		}
+	}
+
 	@include r(767) {
 		padding-top: 42px;
 	}
@@ -923,15 +936,46 @@ a {
 		height: 880px;
 
 		&.block {
+			@include r(1023) {
+				flex-flow: column wrap;
+				display: flex;
+				align-content: space-between;
+				height: 900px;
+			}
+
+			@include r(767) {
+				height: auto;
+				display: block;
+			}
+
 			width: 100%;
 			flex-flow: initial;
 			align-items: flex-start;
 			height: auto;
 
 			.services__item {
+				@include r(1023) {
+					width: calc(50% - 18px);
+				}
+
+				@include r(767) {
+					width: 100%;
+					margin-left: 0;
+					margin-right: 0;
+				}
+	
+
 				width: calc(33.33% - 18px);
 
 				&:hover {
+					@include r(1279) {
+						margin-bottom: 20px;
+					}
+
+					@include r(767) {
+						margin-bottom: 12px;
+					}
+		
 					margin-bottom: -52px;
 				}
 			}
@@ -974,6 +1018,23 @@ a {
 		}
 
 		&.single {
+			@include r(1279) {
+				padding-bottom: 90px;
+			}
+	
+			@include r(1023) {
+				width: calc(50% - 9px);
+				margin: 30px auto 0;
+			}
+	
+			@include r(767) {
+				width: 100%;
+				margin-left: 0;
+				margin-right: 0;
+				margin-bottom: 12px;
+				padding: 18px 11px 90px;
+			}
+
 			width: calc(33.33% - 18px);
 
 			&.show-button {
@@ -1084,9 +1145,25 @@ a {
 }
 
 .vip {
+	@include r(1023) {
+		padding-top: 60px;
+	}
+
+	@include r(767) {
+		text-align: center;
+
+		br {
+			display: none;
+		}
+	}
+
 	padding: 168px 0 60px;
 
 	.container {
+		@include r(1023) {
+			display: block;
+		}
+
 		@include fssb;
 	}
 
@@ -2155,10 +2232,14 @@ a {
 	z-index: -1;
 	transition: $trans;
 	backdrop-filter: blur(6px);
+	pointer-events: none;
+	user-select: none;
 
 	&.active {
 		opacity: 1;
 		z-index: 11;
+		pointer-events: all;
+		user-select: initial;
 	}
 }
 
@@ -2177,6 +2258,10 @@ a {
 
 	&#changepassword,
 	&#password {
+		@include r(767) {
+			width: 100%;
+		}
+
 		width: 670px;
 
 		.modal__body {
@@ -2232,6 +2317,10 @@ a {
 
 	&#subscribe {
 		form {
+			@include r(767) {
+				width: 100%;
+			}
+
 			width: 357px;
 			margin: 0 auto;
 
@@ -2245,6 +2334,12 @@ a {
 	&#create,
 	&#wait {
 		a:not(.btn) {
+			@include r(767) {
+				margin-right: 0;
+				margin-bottom: 15px;
+				display: block;
+			}
+
 			color: $blue;
 			text-transform: uppercase;
 			font-weight: 600;
@@ -2286,12 +2381,25 @@ a {
 	}
 
 	&__text {
+		@include r(767) {
+			font-size: 14px;
+			line-height: 1.2;
+
+			 br {
+				 display: none;
+			 }
+		}
+
 		font-size: 16px;
 		line-height: 1.5;
 		margin-bottom: 30px;
 	}
 	
 	&__body {
+		@include r(767) {
+			padding: 40px 15px 20px;
+		}
+
 		padding: 50px 80px 50px;
 		text-align: center;
 	}
@@ -2300,17 +2408,39 @@ a {
 		margin-top: 40px;
 
 		.btn {
+			@include r(767) {
+				width: 100%;
+				margin-right: 0;
+				margin-left: 0;
+				padding-left: 0;
+				padding-right: 0;
+				text-align: center;
+
+				br{
+					display: none;
+				}
+			}
+
 			width: 60%;
 			text-align: center;
 		}
 
 		.btn-arrow {
+			@include r(767) {
+				height: 50px;
+			}
+
 			width: initial;
 			text-align: left;
 		}
 	}
 
 	&__close {
+		@include r(767) {
+			top: 20px;
+			right: 20px;
+		}
+
 		position: absolute;
 		right: 30px;
 		top: 30px;
@@ -2338,6 +2468,10 @@ a {
 	}
 
 	&__item {
+		@include r(767) {
+			padding: 10px 13px;
+		}
+
 		background: $light-blue;
 		border-radius: 5px;
 		font-size: 16px;
@@ -3269,16 +3403,59 @@ a {
 }
 
 .template {
+	@include r(1023) {
+		padding: 60px 0;
+	}
+
 	padding: 121px 0;
 
 	.title {
+		@include r(1279) {
+			display: block;
+
+			h2 {
+				margin-bottom: 30px;
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+		
+		@include r(767) {
+			.btn {
+				@include centerX;
+				margin-bottom: 15px;
+			}
+		}
+
 		@include fcsb;
 
 		& > div {
+			@include r(1279) {
+				@include fssb;
+			}
+
+			@include r(1023) {
+				div:not(.direction) {
+					flex-shrink: 0;
+				}
+			}
+
+			@include r(767) {
+				display: block;
+			}
+
 			@include fsn;
 		}
 
 		.direction {
+			@include r(767) {
+				font-size: 16px;
+				text-align: center;
+				margin-right: 0;
+				margin-bottom: 20px;
+				display: block;
+			}
+
 			color: #9699A7;
 			text-align: right;
 			@include fsn;
@@ -3286,6 +3463,10 @@ a {
 			font-size: 20px;
 
 			img {
+				@include r(767) {
+					display: none;
+				}
+
 				margin-left: 12px;
 				user-select: none;
 				pointer-events: none;
@@ -3295,14 +3476,36 @@ a {
 	}
 
 	&__list {
+		@include r(767) {
+			margin-right: 0;
+			margin-left: 0;
+		}
+
 		@include flexlist(35px, 50px);
 	}
 
 	&__item {
+		@include r(1023) {
+			@include flexitem(33.33%, 35px, 50px);
+		}
+
+		@include r(767) {
+			width: 100%;
+			margin-right: 0;
+			margin-left: 0;
+		}
+
 		@include flexitem(25%, 35px, 50px);
 		text-align: center;
 
 		.btn {
+			@include r(1279) {
+				padding-left: 0;
+				padding-right: 0;
+				text-align: center;
+				width: 95%;
+			}
+
 			font-size: 14px;
 			position: relative;
 			z-index: 2;
@@ -3313,12 +3516,33 @@ a {
 	}
 
 	&__title {
+		@include r(1279) {
+			font-size: 12px;
+			margin-bottom: 0;
+		}
+
 		font-size: 16px;
 		font-weight: 600;
 		margin-bottom: 10px;
 	}
 
 	&__img {
+		@include r(1279) {
+			height: 29.1vw;
+		}
+
+		@include r(1023) {
+			height: 39vw;
+		}
+
+		@include r(767) {
+			height: 123vw;
+		}
+
+		@include r(374) {
+			height: 122vw;
+		}
+
 		width: 100%;
 		height: 348px;
 		@include cover;
@@ -3414,9 +3638,39 @@ a {
 }
 
 .examples {
+	@include r(767) {
+		padding: 60px 0;
+	}
+
 	padding: 180px 0;
 
+	&__select {
+		@include r(767) {
+			@include fcc;
+		}
+
+		margin-bottom: 30px;
+		text-transform: uppercase;
+		font-weight: 700;
+		margin-top: 80px;
+		display: none;
+
+		svg {
+			margin-left: 10px;
+
+			path {
+				fill: $text;
+			}
+		}
+	}
+
 	&__item {
+		@include r(767) {
+			margin-left: -15px;
+			width: calc(100% + 30px);
+			padding: 40px 15px;
+		}
+
 		border-radius: 10px;
 		background: $light-blue;
 		padding: 50px 40px;
@@ -3425,13 +3679,39 @@ a {
 	}
 
 	&__header {
+		@include r(767) {
+			text-align: center;
+			display: block;
+
+			.search__btn {
+				display: none;
+			}
+		}
+
 		@include fcsb;
+
+		h3 {
+			@include r(767) {
+				text-align: center;
+			}
+
+			text-transform: uppercase;
+		}
 	}
 
 	&__body {
+		@include r(767) {
+			flex-wrap: wrap;
+		}
+
 		@include fsn;
 
 		img {
+			@include r(767) {
+				max-width: 100%;
+				@include centerX;
+			}
+
 			margin-right: 35px;
 			box-shadow: 0px 18px 30px -16px rgba(156, 164, 200, 0.5);
 			border-radius: 5px;
@@ -3441,6 +3721,12 @@ a {
 		h4 {
 			margin-top: 0;
 			margin-bottom: 14px;
+		}
+
+		& > div:first-child {
+			@include r(767) {
+				order: 2;
+			}
 		}
 	}
 
@@ -3458,6 +3744,20 @@ a {
 }
 
 .search {
+	@include r(767) {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		transform: none;
+		width: 100%;
+		opacity: 0;
+		pointer-events: none;
+		user-select: none;
+		z-index: 5;
+	}
+
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -3471,6 +3771,12 @@ a {
 	transition: all .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 
 	&.active {
+		@include r(767) {
+			opacity: 1;
+			pointer-events: all;
+			user-select: initial;
+		}
+
 		transform: translateX(0);
 	}
 
@@ -3575,11 +3881,94 @@ a {
 	background: #fff;
 	z-index: 3;
 
+	&.preview {
+		.share {
+			@include r(1023) {
+				display: none;
+			}
+		}
+
+		.topbar__left {
+			@include r(1023) {
+				display: block;
+			}
+		}
+
+		.topbar__template,
+		.topbar__controls {
+			@include r(767) {
+				display: none;
+			}
+		}
+	}
+
+	&.view {
+		@include r(1023) {
+			.topbar__left {
+				display: flex;
+			}
+	
+			.download,
+			.topbar__template {
+				display: none;
+			}
+	
+			.topbar__right {
+				a {
+					display: none;
+				}
+			}
+		}
+
+		@include r(767) {
+			display: none;
+
+			.topbar__template {
+				&:hover {
+					background: transparent;
+				}
+			}
+		}
+		
+		
+	}
+
 	.container {
 		@include fcsb;
 	}
 
+	&__edit {
+		@include r(1023) {
+			@include fcc;
+		}
+		
+		display: none;
+		border-radius: 50%;
+		background: #F8F8FD;
+		transition: $trans;
+		width: 40px;
+		height: 40px;
+
+		path {
+			fill: #9699A7;
+			transition: $trans;
+		}
+
+		&.active,
+		&:hover {
+			background: $blue;
+
+			path {
+				fill: #fff;
+			}
+		}
+	}
+
 	&__back {
+		@include r(1023) {
+			display: none;
+		}
+
 		color: #9699A7;
 		@include fcn;
 		cursor: pointer;
@@ -3607,6 +3996,10 @@ a {
 	}
 
 	&__left {
+		@include r(1023) {
+			display: none;
+		}
+
 		@include fcn;
 	}
 
@@ -3684,6 +4077,16 @@ a {
 	}
 	
 	&__template {
+		@include r(767) {
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			
+			span {
+				display: none;
+			}
+		}
+
 		@include fcc;
 		cursor: pointer;
 		height: 30px;
@@ -3711,6 +4114,10 @@ a {
 		}
 
 		svg {
+			@include r(767) {
+				margin-right: 0;
+			}
+
 			margin-right: 15px;
 
 			path {
@@ -3723,6 +4130,10 @@ a {
 		@include fcn;
 
 		.btn {
+			@include r(767) {
+				display: none;
+			}
+
 			height: 39px;
 			@include fcc;
 			color: #8388C0;
@@ -3808,6 +4219,7 @@ a {
 		border-radius: 5px;
 		box-shadow: 0px 7px 20px -9px rgba(110, 115, 152, 0.25);
 		pointer-events: none;
+		z-index: 3;
 
 		a {
 			display: block;
@@ -3833,6 +4245,10 @@ a {
 .constructor {
 	&.active {
 		.sidebar {
+			@include r(1023) {
+				display: none !important;
+			}
+
 			transform: translateX(0);
 
 			.sidebar__trigger img {
@@ -3845,12 +4261,17 @@ a {
 			transform: translateX(0)
 		}
 	}
+
 	.container {
 		@include fssb;
 		position: relative;
 		overflow: hidden;
 
 		&::before {
+			@include r(1023) {
+				display: none;
+			}
+
 			content: '';
 			position: absolute;
 			background: #F6F7FA;
@@ -3864,6 +4285,11 @@ a {
 	}
 
 	&__body {
+		@include r(1023) {
+			width: 100%;
+			padding-top: 58px;
+		}
+
 		width: 61.5%;
 		padding: 31px 0;
 	}
@@ -3890,14 +4316,34 @@ a {
 	}
 
 	&__person {
+		@include r(767) {
+			flex-wrap: wrap;
+
+			& > .constructor__item {
+				order: 2;
+			}
+		}
+
 		@include fssb;
 	}
 
 	&__photo {
+		@include r(767) {
+			margin-left: 0;
+			margin-top: 6px;
+			margin-bottom: 27px;
+			@include fcn;
+		}
+
 		margin-left: 84px;
 		margin-top: 27px;
 
 		img {
+			@include r(767) {
+				width: 44px;
+				margin-right: 20px;
+			}
+
 			pointer-events: none;
 			user-select: none;
 		}
@@ -3928,6 +4374,10 @@ a {
 		margin-bottom: 50px;
 
 		.form-group {
+			@include r(767) {
+				margin-bottom: 17px;
+			}
+
 			margin-bottom: 15px;
 
 			&:last-child {
@@ -3940,6 +4390,11 @@ a {
 		@include fcsb;
 
 		svg {
+			@include r(767) {
+				flex-shrink: 0;
+				margin-left: 10px;
+			}
+
 			cursor: pointer;
 
 			&:hover path {
@@ -3953,6 +4408,10 @@ a {
 	}
 
 	&__title {
+		@include r(767) {
+			font-size: 14px;
+		}
+
 		font-weight: 600;
 		font-size: 16px;
 		margin-bottom: 9px;
@@ -3963,6 +4422,10 @@ a {
 		@include fcsb;
 		margin-bottom: 19px;
 		color: #9699A7;
+
+		&.small {
+			font-size: 12px;
+		}
 
 		svg {
 			margin-left: 44px;
@@ -3980,18 +4443,40 @@ a {
 	}
 
 	.flex {
+		@include r(767) {
+			display: block;
+		}
+
 		@include fssb;
 
 		& > input,
 		& > div {
+			@include r(767) {
+				width: 100%;
+			}
+
 			width: 48%;
 		}
 
 		.form-group {
 			margin-bottom: 15px;
+
+			input {
+				@include r(767) {
+					margin-bottom: 10px;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
 		}
 
 		& > .form-group {
+			@include r(767) {
+				width: 100%;
+			}
+
 			width: 31%;
 		}
 	}
@@ -4042,10 +4527,18 @@ a {
 		}
 
 		.list {
+			@include r(767) {
+				display: block;
+			}
+
 			display: flex;
 			flex-wrap: wrap;
 
 			.item {
+				@include r(767) {
+					width: 100%;
+				}
+
 				width: 48%;
 				@include fcn;
 				margin-bottom: 20px;
@@ -4105,6 +4598,10 @@ a {
 	margin-bottom: 20px;
 
 	& > div {
+		@include r(767) {
+			padding: 9px 12px;
+		}
+
 		padding: 13px 20px;
 		margin: 0 5px 10px;
 		background: $light-blue;
@@ -4139,6 +4636,10 @@ a {
 		}
 
 		.form-group {
+			@include r(767) {
+				width: 100%;
+			}
+
 			position: relative;
 			width: 357px;
 
@@ -4168,6 +4669,11 @@ a {
 	}
 
 	&__dropdown {
+		@include r(767) {
+			left: -15px;
+			right: -15px;
+		}
+
 		position: absolute;
 		bottom: -5px;
 		left: 0;
@@ -4227,6 +4733,10 @@ a {
 	}
 
 	&__trigger {
+		@include r(767) {
+			font-size: 14px;
+		}
+
 		color: $blue;
 		font-weight: 600;
 		@include fcn;
@@ -4288,6 +4798,10 @@ a {
 	}
 
 	&__right {
+		@include r(767) {
+			display: none;
+		}
+
 		@include fcn;
 		color: $blue;
 		font-weight: 500;
@@ -4617,6 +5131,7 @@ a {
 		opacity: 0;
 		pointer-events: none;
 		box-shadow: 0px 11px 16px -9px rgba(110, 115, 152, 0.32);
+		z-index: 2;
 
 		&.active {
 			opacity: 1;
@@ -4646,6 +5161,10 @@ a {
 		position: relative;
 
 		&::before {
+			@include r(1279) {
+				display: none;
+			}
+
 			content: '';
 			position: absolute;
 			right: 0;
@@ -4656,10 +5175,82 @@ a {
 		}
 
 		& > div {
+			@include r(1279) {
+				width: 100%;
+			}
+
 			width: 50%;
 			position: relative;
 			z-index: 2;
 			height: 100%;
+		}
+	}
+
+	&.preview {
+		@include r(1279) {
+			.change__left {
+				margin-bottom: 0;
+			}
+		}
+
+		@include r(1023) {
+			.sidebar {
+				display: none;
+			}
+
+			.change__left {
+				width: 100% !important;
+			}
+		}
+	}
+
+	&__tablet {
+		@include r(1279) {
+			display: flex;
+		}
+
+		@include r(767) {
+			justify-content: center;
+			padding-bottom: 10px;
+		}
+
+		padding: 26px 45px;
+		color: #fff;
+		font-size: 14px;
+		@include fcsb;
+		display: none;
+
+		.colors {
+			@include r(767) {
+				display: none;
+			}
+
+			div {
+				width: 32px;
+				height: 32px;
+				margin: 0 10px;
+			}
+		}
+	}
+
+	&__mobile {
+		@include r(767) {
+			display: block;
+		}
+
+		color: #fff;
+		font-size: 14px;
+		display: none;
+		text-align: center;
+
+		.colors {
+			margin-top: 10px;
+
+			div {
+				width: 32px;
+				height: 32px;
+				margin: 0 10px;
+			}
 		}
 	}
 
@@ -4669,9 +5260,23 @@ a {
 	}
 
 	&__left {
+		@include r(1279) {
+			@include fcc;
+			flex-direction: column;
+			margin-bottom: 300px;
+		}
+
+		@include r(1023) {
+			margin-bottom: 197px;
+		}
+
 		padding: 50px 0;
 
 		img {
+			@include r(767) {
+				max-width: 100%;
+			}
+
 			box-shadow: 0px 18px 30px -16px rgba(156, 164, 200, 0.5);
 			border-radius: 5px;
 			margin-bottom: 40px;
@@ -4682,6 +5287,21 @@ a {
 	}
 
 	&__right {
+		@include r(1279) {
+			position: fixed !important;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			width: 100% !important;
+			height: 300px !important;
+			background: #444857;
+			overflow: hidden;
+		}
+
+		@include r(767) {
+			height: 197px !important;
+		}
+
 		display: none;
 
 		&.active {
@@ -4690,15 +5310,59 @@ a {
 	}
 
 	.template__list {
+		@include r(1279) {
+			margin-left: -14px;
+			margin-right: -14px;
+			flex-wrap: nowrap;
+			overflow: scroll;
+			-webkit-overflow-scrolling: touch;
+			padding: 0 45px 20px;
+
+			.colors {
+				display: none;
+			}
+		}
+
+		@include r(767) {
+			margin-bottom: 0;
+		}
+
 		background: #444857;
 		@include flexlist(63px , 40px);
 		color: #fff;
 		padding: 30px 35px;
 
 		.template__item {
+			@include r(1279) {
+				width: 130px;
+				margin: 0 7px 0;
+				flex-shrink: 0;
+			}
+
+			@include r(767) {
+				width: initial;
+
+				.template__title {
+					font-weight: 400;
+				}
+
+				&.active .template__title {
+					font-weight: 600;
+				}
+			}
+
 			@include flexitem(50%, 63px , 40px);
 
 			.template__img {
+				@include r(1279) {
+					height: 175px;
+					margin-bottom: 0;
+				}
+
+				@include r(767) {
+					display: none;
+				}
+
 				border: 4px solid #444857;
 				transition: $trans;
 				height: 290px;
@@ -4718,6 +5382,10 @@ a {
 				}
 
 				img {
+					@include r(1279) {
+						width: 26px;
+					}
+
 					transform: scale(0);
 					transition: $trans;
 				}
@@ -4726,6 +5394,11 @@ a {
 	}
 
 	&__navigation {
+		@include r(1279) {
+			transform: none;
+			left: 0;
+		}
+
 		display: inline-block;
 		@include centerX;
 		background: #2D3246;
@@ -4767,10 +5440,18 @@ a {
 }
 
 section.short {
+	@include r(767) {
+		padding: 40px 0;
+	}
+
 	padding: 40px;
 	text-align: center;
 
 	img {
+		@include r(1023) {
+			max-width: 100%;
+		}
+
 		box-shadow: 0px 18px 30px -16px rgba(156, 164, 200, 0.5);
 		border-radius: 5px;
 	}
@@ -4809,6 +5490,15 @@ section.short {
 .preview {
 	.container {
 		&::before {
+			@include r(1279) {
+				display: block;
+				width: 32%;
+			}
+
+			@include r(1023) {
+				display: none;
+			}
+			
 			background: $light-blue;
 			width: 31%;
 		}
@@ -4989,6 +5679,294 @@ section.short {
 		.btn {
 			margin-top: 40px;
 			padding: 15px 50px;
+		}
+	}
+}
+
+.btn-more {
+	@include r(1023) {
+		display: block;
+	}
+
+	position: fixed;
+	right: 15px;
+	bottom: 20px;
+	display: none;
+}
+
+.features {
+	@include r(767) {
+		height: 257px;
+	}
+
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 133px;
+	background: #444857;
+	@include fcn;
+	transform: translateY(100%);
+	transition: $trans;
+	z-index: 3;
+
+	&.preview {
+		@include r(767) {
+			height: initial;
+			padding-bottom: 20px;
+		}
+
+		display: block;
+		height: 242px;
+		color: #fff;
+		
+		#font {
+			@include r(767) {
+				padding: 0 15px;
+			}
+
+			padding: 0 15%;
+		}
+
+		#space {
+			@include r(767) {
+				padding: 0 15px;
+
+				.flex {
+					display: flex;
+    				flex-wrap: wrap;
+				}
+			}
+
+			padding: 0 10%;
+		}
+
+		.flex {
+			@include r(767) {
+				display: block;
+			}
+
+			@include fcsb;
+		}
+
+		.range {
+			@include r(767) {
+				margin-bottom: 20px;
+			}
+
+			width: 100%;
+			margin-right: 70px;
+			padding-bottom: 24px;
+			position: relative;
+			top: 12px;
+		}
+	}
+
+	.counter {
+		@include r(767) {
+			@include fcsb;
+			margin-bottom: 5px;
+		}
+
+		margin: 0;
+
+		.counter__right,
+		.counter__left {
+			padding: 0 20px;
+		}
+	}
+
+	.counter__name {
+		@include r(767) {
+			width: 50%;
+
+			br {
+				display: none;
+			}
+		}
+	}
+
+	&.active {
+		transform: translateY(0);
+	}
+
+	&__title {
+		font-size: 14px;
+		font-weight: 600;
+		color: #fff;
+		text-align: center;
+		margin-top: 30px;
+		margin-bottom: 5px;
+	}
+
+	&__text {
+		color: #9699A7;
+		text-align: center;
+		font-size: 12px;
+	}
+
+	.tabs {
+		@include fcc;
+		margin: 20px 0;
+		border: 0;
+
+		a {
+			height: 39px;
+			width: 98px;
+			@include fcc;
+			background: #9699A7;
+			margin: 0;
+			padding: 0;
+			position: relative;
+
+			&:first-child {
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+
+			&:nth-child(3) {
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+
+			svg {
+				position: relative;
+				z-index: 2;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: -2px;
+				right: -2px;
+				bottom: -2px;
+				left: -2px;
+				border-radius: 5px;
+				background: $blue;
+				opacity: 0;
+				transition: $trans;
+			}
+
+			&.active::before {
+				opacity: 1;
+			}
+		}
+	}
+
+	.topbar {
+		position: static;
+		background: transparent;
+
+		&.view {
+			@include r(767) {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.mobile {
+				@include r(767) {
+					@include fcn;
+					margin: 20px 0;
+				}
+
+				@include fcsb;
+				margin-right: 20px;
+			}
+
+			.container {
+				@include r(767) {
+					display: block;
+					padding: 0 13px;
+				}
+
+				padding: 0 57px;
+			}
+
+			.topbar__left {
+				@include r(767) {
+					display: flex;
+				}
+
+				display: none;
+			}
+
+			.topbar__template {
+				@include r(767) {
+					display: flex;
+					flex-shrink: 0;
+					width: initial;
+					padding-left: 0;
+					margin-right: 0;
+
+					svg {
+						flex-shrink: 0;
+						margin-right: 9px;
+					}
+				}
+
+				display: flex;
+				color: #fff;
+				margin-right: 40px;
+
+				span {
+					@include r(767) {
+						display: block;
+					}
+				}
+			}
+
+			.download {
+				@include r(767) {
+					.btn {
+						font-size: 12px;
+					}
+				}
+
+				display: flex;
+
+				&.active .download__list {
+					transform: translateY(-110%);
+				}
+
+				.download__list {
+					bottom: initial;
+					top: 0;
+					transform: translateY(-100%);
+				}
+			}
+
+			.topbar__right {
+				a {
+					@include r(767) {
+						text-align: center;
+						padding-left: 0;
+						padding-right: 0;
+						width: 100%;
+					}
+
+					display: flex;
+					color: #fff;
+					border-color: #fff;
+					margin-right: 0;
+					flex-shrink: 0;
+				}
+			}
+		}
+
+		.topbar__close {
+			@include r(767) {
+				right: 0;
+			}
+
+			position: absolute;
+			top: 0;
+			right: 45px;
+			border-radius: 0;
+			background: transparent;
+
+			path {
+				fill: #D0D6E5;
+			}
 		}
 	}
 }
